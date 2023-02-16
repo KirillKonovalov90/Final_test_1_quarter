@@ -38,8 +38,7 @@ string[] ArrayOfStringsNoLongerThan3Symbols(string[] array)
     {
         if (array[i].Length < 4)
         {
-            stringOfElements = string.Concat(stringOfElements, " " + array[i]);
-            Console.WriteLine(stringOfElements);
+            stringOfElements = string.Concat(stringOfElements, " " + array[i]);            
         }
     }
     
