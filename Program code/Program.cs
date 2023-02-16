@@ -29,3 +29,29 @@ void PrintArray(string[] array)
 {
     Console.WriteLine("[" + string.Join(", ", array) + "]");
 } 
+
+string[] ArrayOfStringsNoLongerThan3Symbols(string[] array)
+{
+    string stringOfElements = string.Empty;
+
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i].Length < 4)
+        {
+            stringOfElements = string.Concat(stringOfElements, " " + array[i]);
+            Console.WriteLine(stringOfElements);
+        }
+    }
+    
+    string[] result = stringOfElements.Split(" ", StringSplitOptions.RemoveEmptyEntries);
+    return result;
+}
+
+string[] strings = NewStringsArrayCreation();
+
+PrintArray(strings);
+Console.WriteLine();
+
+string[] result = ArrayOfStringsNoLongerThan3Symbols(strings);
+
+PrintArray(result);
