@@ -24,3 +24,8 @@
     
     return array;
 }
+
+void PrintArray(string[] array)
+{
+    Console.WriteLine("[" + string.Join(", ", array) + "]");
+} 
